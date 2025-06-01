@@ -6,11 +6,11 @@ This project presents a robust **Speaker Verification System** that leverages MF
 ---
 
 ## 🔥 Features  
- **🎙️MFCC Feature Extraction** Captures relevant acoustic features from raw audio data to represent speaker-specific characteristics.  
- **🧠Train a CNN-LSTM model** Utilizes a hybrid Convolutional Neural Network and Long Short-Term Memory architecture for robust speaker classification.  
- **📊Performance Evaluation** Assesses model accuracy and F1-score to ensure generalization and reliability on unseen audio samples. 
- **🖥️Streamlit-based UI** Provides an interactive and user-friendly UI for real-time speaker verification and testing. 
- **🔎Similarity score-based speaker identification** Implements cosine similarity to match new voice samples against known speaker embeddings.
+ **MFCC Feature Extraction** Captures relevant acoustic features from raw audio data to represent speaker-specific characteristics.  
+ **Train a CNN-LSTM model** Utilizes a hybrid Convolutional Neural Network and Long Short-Term Memory architecture for robust speaker classification.  
+ **Performance Evaluation** Assesses model accuracy and F1-score to ensure generalization and reliability on unseen audio samples. 
+ **Streamlit-based UI** Provides an interactive and user-friendly UI for real-time speaker verification and testing. 
+ **Similarity score-based speaker identification** Implements cosine similarity to match new voice samples against known speaker embeddings.
 ---
 
 ## 🫠 Technologies Used  
