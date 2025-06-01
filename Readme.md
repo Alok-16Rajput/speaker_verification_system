@@ -7,9 +7,9 @@ This project presents a robust **Speaker Verification System** that leverages MF
 ## Dataset Details
 **Source:**
 **Audio data is taken from Mozilla’s Common Voice project (version Delta Segment 19.0). You can download it from:**
-'''bash
+
 https://commonvoice.mozilla.org/en/datasets
-'''
+
 Once downloaded, unzip the archive. The audio files and metadata are stored under:
 
 data/
@@ -21,7 +21,7 @@ data/validated.tsv
 **client_id** – Unique id of each speaker.
 **path** – filename of MP3 audio clip.
 **Additional metadata**: language, age, gender, client details, etc.
-##Data structure:
+## Data structure:
 
 **validated.tsv**
 
@@ -40,13 +40,13 @@ data
 ## Selecting Target & Non-Target Speakers data
 **Choose a “Target” Speaker**
 **We scanned the validated.tsv file to find which client_id has the maximum number of validated audio clips.**
-In our case, the client_id with the most clips was 'b87...' (28 total audio clips).
-We created a DataFrame df_target
-Choose “Non-Target” Speakers
-All remaining audio clips (one which not belonging to the target speaker) are collected into:
+**In our case, the client_id with the most clips was 'b87...' (28 total audio clips).**
+**We created a DataFrame df_target**
+**Choose “Non-Target” Speakers**
+**All remaining audio clips (one which not belonging to the target speaker) are collected into:**
 
-df_non_target_all = df[df["client_id"] != target_id]
-From this large pool, we randomly sampled 40 audio clips to represent “non-target” data
+**df_non_target_all = df[df["client_id"] != target_id]**
+**From this large pool, we randomly sampled 40 audio clips to represent “non-target” data**
 
 ## Final DataFrames
 **df_target:** Contains 28 audio clips from the chosen reference speaker.
