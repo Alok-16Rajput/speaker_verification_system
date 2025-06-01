@@ -89,7 +89,6 @@ The proposed deep learning model is designed to effectively learn both spatial a
 ---
 
 ## 🎼 MFCC Feature Visualization  
-![MFCC Features](MFCC.png)  
 
 The **Mel-Frequency Cepstral Coefficients (MFCCs)** are extracted from audio signals to capture essential spectral features for speaker verification. The above heatmap visualizes the MFCC features of a speech sample.
 
