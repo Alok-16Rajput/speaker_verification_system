@@ -4,6 +4,54 @@
 This project presents a robust **Speaker Verification System** that leverages MFCC-based feature extraction, a hybrid CNN-LSTM deep learning model, and an intuitive Streamlit interface for real-time interaction. The system is designed to authenticate and verify speakers by analyzing their unique vocal signatures, accurately determining whether a given audio sample matches a previously enrolled speaker.
 
 ---
+## Dataset Details
+**Source:**
+**Audio data is taken from Mozilla’s Common Voice project (version Delta Segment 19.0). You can download it from:**
+'''bash
+https://commonvoice.mozilla.org/en/datasets
+'''
+Once downloaded, unzip the archive. The audio files and metadata are stored under:
+
+data/
+The main file for this implementation is:
+
+data/validated.tsv
+**which contains:**
+
+**client_id** – Unique id of each speaker.
+**path** – filename of MP3 audio clip.
+**Additional metadata**: language, age, gender, client details, etc.
+##Data structure:
+
+**validated.tsv**
+
+**important columns for this project: client_id and path.**
+Audio files
+
+**All audio files are stored under data//clips
+In our directory structure, once unzipped:**
+
+data
+    ├── clips
+    │   ├── 0000000.mp3
+    │   ├── 0000001.mp3
+    │   └── ...
+    └── validated.tsv
+## Selecting Target & Non-Target Speakers data
+**Choose a “Target” Speaker**
+**We scanned the validated.tsv file to find which client_id has the maximum number of validated audio clips.**
+In our case, the client_id with the most clips was 'b87...' (28 total audio clips).
+We created a DataFrame df_target
+Choose “Non-Target” Speakers
+All remaining audio clips (one which not belonging to the target speaker) are collected into:
+
+df_non_target_all = df[df["client_id"] != target_id]
+From this large pool, we randomly sampled 40 audio clips to represent “non-target” data
+
+## Final DataFrames
+**df_target:** Contains 28 audio clips from the chosen reference speaker.
+**df_non_target:** Contains 40 randomly selected audio clips from all other speakers.
+**We concatenated these two DataFrames ( with a binary label) to form our full dataset used for training/testing.**
 
 ## 🔥 Features  
  **MFCC Feature Extraction:** Captures relevant acoustic features from raw audio data to represent speaker-specific characteristics.  
