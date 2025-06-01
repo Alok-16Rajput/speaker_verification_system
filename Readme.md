@@ -1,4 +1,4 @@
-# 🎤 Speaker Verification System using Deep Learning
+# 🎤 Speaker Verification System using Deep Learning Techniques
 ---
 ## 📌 Overview  
 This project presents a robust **Speaker Verification System** that leverages MFCC-based feature extraction, a hybrid CNN-LSTM deep learning model, and an intuitive Streamlit interface for real-time interaction. The system is designed to authenticate and verify speakers by analyzing their unique vocal signatures, accurately determining whether a given audio sample matches a previously enrolled speaker.
