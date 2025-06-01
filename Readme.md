@@ -75,6 +75,16 @@ model.ipynb
 ### 4. Start Streamlit App  
 ```bash
 streamlit run app.py
+This will open a browser window (or show a local URL) where you can:
+
+Upload a WAV/MP3 file from your computer.
+
+Or select one of the example clips in testing_data/.
+
+Click “Predict Speaker” to see:
+
+Prediction: “Target Speaker” or “Non-Target Speaker”
+Confidence: Percentage score
 ```
 
 ---
